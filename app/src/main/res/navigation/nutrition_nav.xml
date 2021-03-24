@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wheel_fortune_nav"
+    app:startDestination="@id/ingredientsFragment">
+
+    <fragment
+        android:id="@+id/ingredientsFragment"
+        android:name="com.task.nutritionapp.ui.ingredients.IngredientsFragment"
+        android:label="ingredients_fragment"
+        tools:layout="@layout/fragment_ingredients">
+
+        <action
+            android:id="@+id/to_total_nutrition_fragment"
+            app:destination="@id/fragmentTotalNutrition" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/fragmentTotalNutrition"
+        android:name="com.task.nutritionapp.ui.totalnutrition.TotalSummaryNitration"
+        android:label="ingredients_fragment"
+        tools:layout="@layout/fragment_total_nutration">
+        <argument
+            android:name="nutrationList"
+            app:argType="com.task.nutritionapp.data.model.NutrationList" />
+
+    </fragment>
+</navigation>
